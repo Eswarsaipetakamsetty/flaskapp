@@ -5,3 +5,4 @@ numpy
 opencv-python-headless==4.7.0.72
 boto3==1.26.164
 werkzeug==2.2.2
+gunicorn
