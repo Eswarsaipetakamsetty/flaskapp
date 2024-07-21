@@ -4,3 +4,4 @@ tensorflow==2.12.0
 numpy
 opencv-python-headless==4.7.0.72
 boto3==1.26.164
+gunicorn
