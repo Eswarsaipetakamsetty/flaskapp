@@ -59,7 +59,6 @@ def process_video():
         frames.append(preprocessed_frame)
 
     cap.release()
-    os.remove(temp_path)
 
     # Convert frames to numpy array
     frames = np.concatenate(frames, axis=0)
@@ -72,8 +71,10 @@ def process_video():
 
     if planting_detected:
         return jsonify({'message': 'Planting action detected!'}), 200
+        
     else:
         return jsonify({'message': 'No planting action detected.'}), 200
+        
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
