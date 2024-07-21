@@ -8,7 +8,7 @@ services:
       apt-get install -y build-essential gcc && \
       pip install --upgrade pip && \
       pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: gunicorn app:app
     envVars:
       - key: AWS_ACCESS_KEY_ID
         value: AKIAVRUVQQJ5NZBR33FC
